@@ -1,5 +1,5 @@
 {
-  "name": "Logins",
+  "name": "peter",
   "version": "1.0.0",
   "engines": {
     "node": "7.5.0",
@@ -22,7 +22,7 @@
     "Login"
   ],
   "author": "Cody Van De Mark",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "dependencies": {
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
@@ -40,9 +40,17 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-env": "^1.1.8",
-    "eslint": "^3.0.0",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.10.1",
+    "eslint-plugin-import": "^1.16.0",
     "nodemon": "^1.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petarfitzpatrick/DomoMaker-A-Start.git"
+  },
+  "bugs": {
+    "url": "https://github.com/petarfitzpatrick/DomoMaker-A-Start/issues"
+  },
+  "homepage": "https://github.com/petarfitzpatrick/DomoMaker-A-Start#readme"
 }

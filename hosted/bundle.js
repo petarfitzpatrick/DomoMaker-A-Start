@@ -45,6 +45,12 @@ var renderDomo = function renderDomo() {
       "Age: "
     ),
     React.createElement("input", { id: "domoAge", type: "text", name: "age", placeholder: "Domo Age" }),
+    React.createElement(
+      "label",
+      { htmlFor: "personality" },
+      "Personality: "
+    ),
+    React.createElement("input", { id: "domoPersonality", type: "text", name: "personality", placeholder: "Domo Personality" }),
     React.createElement("input", { type: "hidden", name: "_csrf", value: this.props.csrf }),
     React.createElement("input", { className: "makeDomoSubmit", type: "submit", value: "Make Domo" })
   );
@@ -80,6 +86,13 @@ var renderDomoList = function renderDomoList() {
         { className: "domoAge" },
         " Age: ",
         domo.age,
+        " "
+      ),
+      React.createElement(
+        "h3",
+        { className: "domoPersonality" },
+        " Personality: ",
+        domo.personality,
         " "
       )
     );

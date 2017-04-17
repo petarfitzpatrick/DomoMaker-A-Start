@@ -13,15 +13,18 @@
 <body>
   <nav><a href="/login"><img id="logo" src="/assets/img/face.png" alt="face logo"/></a>
     <div class="navlink"><a href="/logout">Log out</a></div>
-    <div class="navlink"><a href="/roster">Roster</a></div>
+    <div class="navlink"><a href="/maker">Maker</a></div>
   </nav>
-  <section id="makeDomo">
-  </section>
   <section id="domos">
+      {{#domos}}
+        <div key={{_id}} class="domo">
+            <img src="/assets/img/domoface.jpeg" alt="domo face" class="domoFace" />
+            <h3 class="domoName"> Name: {{name}} </h3>
+            <h3 class="domoAge"> Age: {{age}} </h3>
+            <h3 class="domoPersonality"> Personality: {{personality}} </h3>
+        </div>
+      {{/domos}}
   </section>
-  <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
-    <h3><span id="errorMessage"></span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
-  </div>
-  <script src="/assets/bundle.js"></script>
+  <script src="/assets/rosterBundle.js"></script>
 </body>
 </html>

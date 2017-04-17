@@ -34,6 +34,8 @@ const renderDomo = function() {
       <input id="domoName" type="text" name="name" placeholder="Domo Name"/>
       <label htmlFor="age">Age: </label>
       <input id="domoAge" type="text" name="age" placeholder="Domo Age"/>
+      <label htmlFor="personality">Personality: </label>
+      <input id="domoPersonality" type="text" name="personality" placeholder="Domo Personality"/>
       <input type="hidden" name="_csrf" value={this.props.csrf} />
       <input className="makeDomoSubmit" type="submit" value="Make Domo" />
     </form>
@@ -55,6 +57,7 @@ const renderDomoList = function() {
         <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
         <h3 className="domoName"> Name: {domo.name} </h3>
         <h3 className="domoAge"> Age: {domo.age} </h3>
+        <h3 className="domoPersonality"> Personality: {domo.personality} </h3>
       </div>
     );
   });

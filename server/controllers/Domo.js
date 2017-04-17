@@ -11,6 +11,7 @@ const makeDomo = (req, res) => {
   const domoData = {
     name: req.body.name,
     age: req.body.age,
+    personality: req.body.personality,
     owner: req.session.account._id,
   };
 
@@ -43,6 +44,17 @@ const makerPage = (req, res) => {
   });
 };
 
+const rosterPage = (req, res) => {
+  Domo.DomoModel.findByOwner(req.session.account._id, (err, docs) => {
+    if (err) {
+      console.log(err);
+      return res.status(400).json({ error: 'An error occurred' });
+    }
+    console.log(docs);
+    return res.render('roster', { csrfToken: req.csrfToken(), domos: docs });
+  });
+};
+
 const getDomos = (request, response) => {
   const req = request;
   const res = response;
@@ -58,5 +70,6 @@ const getDomos = (request, response) => {
 };
 
 module.exports.makerPage = makerPage;
+module.exports.rosterPage = rosterPage;
 module.exports.getDomos = getDomos;
 module.exports.make = makeDomo;
